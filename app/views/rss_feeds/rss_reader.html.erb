@@ -1,0 +1,19 @@
+
+<%#=debug(@rss_titles)%>
+<%#= button_to "New", action: "index" %>
+<%=link_to "Back To List", root_path,:style=> "font-weight:bold;"%>
+<br>
+<br>
+<br>
+<table>
+ <%@rss_titles.each do |r|%>
+  <tr>
+    <td>
+       <%#=r%>
+      <%= link_to r[:title],r[:url],:target=> "_blank"%>
+      <br>
+      <%=r[:published]%>
+    </td>
+  </tr>
+ <%end%>
+</table>
